@@ -13,6 +13,7 @@ Coverage_demo
 │  
 ├─ run_coverage
 │  ├─ run_coverage.py
+|  ├─ .env
 ├─ setup
 │  ├─ setup.py
 │
