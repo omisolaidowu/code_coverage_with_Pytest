@@ -12,11 +12,11 @@ class test_should_tweak_name:
     def test_should_addNames(self, name):
         new_name = self.name+" "+name
 
-        assert new_name == "Idowu Omisola", "new_name should be Idowu Omisola"
+        assert new_name == "LambdaTest Grid", "new_name should be LambdaTest Grid"
 
         return new_name
 
     def test_should_changeName(self, name):
-        new_name = name
-        assert new_name == "Paul", "new_name should be Paul" 
+        self.name = name
+        assert self.name == "LambdaTest Cloud Grid", "new_name should be LambdaTest Cloud Grid" 
         return name

@@ -1,9 +1,11 @@
+# Import the Pytest coverage plugin:
 import coverage
-cov = coverage.Coverage()
 
+# Start code coverage before importing other modules:
+cov = coverage.Coverage()
 cov.start()
 
-import unittest
+# Main code to be covered----------:
 
 import sys
 sys.path.append(sys.path[0] + "/..")
@@ -14,22 +16,15 @@ from testscenario.scenarioRun import test_registration
 
 
 registration = test_registration()
-
 registration.test_should_register_user()
 
 
+tweak_names = test_should_tweak_name("LambdaTest")
+print(tweak_names.test_should_addNames("Grid"))
+print(tweak_names.test_should_changeName("LambdaTest Cloud Grid"))
 
-
-
-
-tweak_names = test_should_tweak_name("Idowu")
-
-print(tweak_names.test_should_addNames("Omisola"))
-print(tweak_names.test_should_changeName("Paul"))
     
-    
-
-
+# Stop code coverage and save the output in a reports directory---------:
 cov.stop()
 cov.save()
 cov.html_report(directory='coverage_reports')
