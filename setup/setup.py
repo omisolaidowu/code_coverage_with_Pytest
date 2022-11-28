@@ -1,8 +1,8 @@
 from selenium import webdriver
-
 from dotenv import load_dotenv
 import os
 load_dotenv('.env')
+import json
 
 LT_GRID_USERNAME = os.getenv("LT_GRID_USERNAME")
 LT_ACCESS_KEY = os.getenv("LT_ACCESS_KEY")
@@ -11,8 +11,8 @@ desired_caps = {
 		'LT:Options' : {
 			"user" : os.getenv("LT_GRID_USERNAME"),
 			"accessKey" : os.getenv("LT_ACCESS_KEY"),
-			"build" : "Test Coverage Idowu",
-			"name" : "Fireforx coverage demo2",
+			"build" : "Test Coverage complete",
+			"name" : "Firefox coverage complete",
 			"platformName" : os.getenv("TEST_OS")
 		},
 		"browserName" : "FireFox",

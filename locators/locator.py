@@ -1,5 +1,7 @@
 from selenium.webdriver.common.by import By
 
+from selenium.common.exceptions import NoSuchElementException
+
 class element_locator:
     first_name = "//input[@id='input-firstname']"
     last_name = "//input[@id='input-lastname']"
@@ -16,14 +18,16 @@ class element_locator:
 locator = element_locator()
 
 
-class registeruser:
+class registerUser:
     def __init__(self, driver) -> None:
         self.driver=driver
-    def error_message(self):
+    def error_message(self):  
         try:
-            return self.driver.find_element(By.XPATH, locator.error_message).text
-        except:
-            print("Email address passed")
+            return self.driver.find_element(By.XPATH, locator.error_message)
+        except NoSuchElementException:
+            print("All code in registration test covered")
+
+
     def test_getWeb(self, URL):
         self.driver.get(URL)
         
