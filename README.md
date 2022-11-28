@@ -11,13 +11,13 @@ Coverage_demo
 │  ├─ plain_tests.py
 │  
 ├─ run_coverage
-│  ├─ run_coverage.py
+│  ├─ test_run_coverage.py
 |  ├─ .env
 ├─ setup
 │  ├─ setup.py
 │
 └─ testscenario
-   ├─ scenarioRun.py
+   ├─ test_scenarioRun.py
 ```
 ## To Run this Test Coverage:
 `cd run_coverage`
