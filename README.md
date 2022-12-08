@@ -24,4 +24,4 @@ Coverage_demo
 
 Then run:
 
-`run_coverage.py`
+`pytest`
